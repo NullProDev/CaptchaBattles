@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,9 @@
     <meta name="captcha game" content="points 2 player websocket captchas game">
     <!--<link rel="manifest" href="/js/pwa.webmanifest">-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#4a90e2"/>
+    <meta name="theme-color" content="#4a90e2" />
 </head>
+
 <body>
     <div id="login-form">
         <h1 id="heading2">Captcha Battles</h1>
@@ -31,78 +33,81 @@
     <!--<h1 id="heading">____ VS ____</h1>-->
     <div id="board">
         <h2 class="card-top word">Select All Images With</h2><br>
-        <div class="grid-container" id="user">
+        <div id="grids">
+            <div class="grid-container" id="user">
 
-            <div class="grid-item-user" id="1" style="border-top-left-radius: 15px;">
-                <img src="white.png" alt="" id="img1" style="border-top-left-radius: 15px;">
+                <div class="grid-item-user" id="1" style="border-top-left-radius: 15px;">
+                    <img src="white.png" alt="" id="img1" style="border-top-left-radius: 15px;">
+                </div>
+                <div class="grid-item-user" id="2">
+                    <img src="white.png" alt="" id="img2">
+                </div>
+                <div class="grid-item-user" id="3" style="border-top-right-radius: 15px;">
+                    <img src="white.png" alt="" id="img3" style="border-top-right-radius: 15px;">
+                </div>
+                <div class="grid-item-user" id="4">
+                    <img src="white.png" alt="" id="img4">
+                </div>
+                <div class="grid-item-user" id="5">
+                    <img src="white.png" alt="" id="img5">
+                </div>
+                <div class="grid-item-user" id="6">
+                    <img src="white.png" alt="" id="img6">
+                </div>
+                <div class="grid-item-user" id="7" style="border-bottom-left-radius: 15px;">
+                    <img src="white.png" alt="" id="img7" style="border-bottom-left-radius: 15px;">
+                </div>
+                <div class="grid-item-user" id="8">
+                    <img src="white.png" alt="" id="img8">
+                </div>
+                <div class="grid-item-user" id="9" style="border-bottom-right-radius: 15px;">
+                    <img src="white.png" alt="" id="img9" style="border-bottom-right-radius: 15px;">
+                </div>
             </div>
-            <div class="grid-item-user"  id="2">
-                <img src="white.png" alt="" id="img2">
-            </div>
-            <div class="grid-item-user" id="3" style="border-top-right-radius: 15px;">
-                <img src="white.png" alt="" id="img3" style="border-top-right-radius: 15px;">
-            </div>
-            <div class="grid-item-user"  id="4">
-                <img src="white.png" alt="" id="img4">
-            </div>
-            <div class="grid-item-user"  id="5">
-                <img src="white.png" alt="" id="img5">
-            </div>
-            <div class="grid-item-user"  id="6"> 
-                <img src="white.png" alt="" id="img6">
-            </div>
-            <div class="grid-item-user" id="7" style="border-bottom-left-radius: 15px;">
-                <img src="white.png" alt="" id="img7" style="border-bottom-left-radius: 15px;">
-            </div>
-            <div class="grid-item-user"  id="8">
-                <img src="white.png" alt="" id="img8">
-            </div>
-            <div class="grid-item-user" id="9"  style="border-bottom-right-radius: 15px;">
-                <img src="white.png" alt="" id="img9" style="border-bottom-right-radius: 15px;" >
+            <div class="grid-container" id="other-player">
+                <div class="grid-item" id="other1" style="border-top-left-radius: 15px;">
+                    <img src="white.png" alt="" id="i1" style="border-top-left-radius: 15px;">
+                </div>
+                <div class="grid-item" id="other2">
+                    <img src="white.png" alt="" id="i2">
+                </div>
+                <div class="grid-item" id="other3" style="border-top-right-radius: 15px;">
+                    <img src="white.png" alt="" id="i3" style="border-top-right-radius: 15px;">
+                </div>
+                <div class="grid-item" id="other4">
+                    <img src="white.png" alt="" id="i4">
+                </div>
+                <div class="grid-item" id="other5">
+                    <img src="white.png" alt="" id="i5">
+                </div>
+                <div class="grid-item" id="other6">
+                    <img src="white.png" alt="" id="i6">
+                </div>
+                <div class="grid-item" id="other7" style="border-bottom-left-radius: 15px;">
+                    <img src="white.png" alt="" id="i7" style="border-bottom-left-radius: 15px;">
+                </div>
+                <div class="grid-item" id="other8">
+                    <img src="white.png" alt="" id="i8">
+                </div>
+                <div class="grid-item" id="other9" style="border-bottom-right-radius: 15px;">
+                    <img src="white.png" alt="" id="i9" style="border-bottom-right-radius: 15px;">
+                </div>
             </div>
         </div>
-        <div class="grid-container" id="other-player">
-            <div class="grid-item" id="other1" style="border-top-left-radius: 15px;">
-                <img src="white.png" alt="" id="i1" style="border-top-left-radius: 15px;">
-            </div>
-            <div class="grid-item" id="other2">
-                <img src="white.png" alt="" id="i2">
-            </div>
-            <div class="grid-item" id="other3" style="border-top-right-radius: 15px;">
-                <img src="white.png" alt="" id="i3" style="border-top-right-radius: 15px;">
-            </div>
-            <div class="grid-item" id="other4">
-                <img src="white.png" alt="" id="i4">
-            </div>
-            <div class="grid-item" id="other5">
-                <img src="white.png" alt="" id="i5">
-            </div>
-            <div class="grid-item" id="other6">
-                <img src="white.png" alt="" id="i6">
-            </div>
-            <div class="grid-item" id="other7" style="border-bottom-left-radius: 15px;">
-                <img src="white.png" alt="" id="i7" style="border-bottom-left-radius: 15px;">
-            </div>
-            <div class="grid-item" id="other8">
-                <img src="white.png" alt="" id="i8">
-            </div>
-            <div class="grid-item" id="other9" style="border-bottom-right-radius: 15px;">
-                <img src="white.png" alt="" id="i9" style="border-bottom-right-radius: 15px;">
-            </div>
-            <button style="margin-top: 1em;" id="verify" type="submit">SKIP</button>
-        </div>
+        <button style="margin-top: 1em; margin-left: 70vw;" id="verify" type="submit">SKIP</button>
+
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script>
         setInterval(check, 10);
         var socket = io();
         var socket = io.connect('/');
-        var nick ="";
+        var nick = "";
         var nickname = document.getElementById('username'),
             btn = document.getElementById('submit');
-        btn.addEventListener('click', function(){
+        btn.addEventListener('click', function () {
             nick = nickname.value;
-            
+
             socket.emit('nname', {
                 nickname: nickname.value
             });
@@ -110,183 +115,184 @@
             document.getElementById('login-form-response').style.display = "block";
         });
         btn2 = document.getElementById('submit2');
-        btn2.addEventListener('click', function(){
+        btn2.addEventListener('click', function () {
             location.reload();
         });
         var urpoints = 0;
         var opnick = "";
-        socket.on('vs', function(data) {
+        socket.on('vs', function (data) {
             //document.getElementById('heading').textContent = nick + " VS " + data;
             document.getElementById('login-form-response').style.display = "none";
             opnick = data;
-            document.getElementById('you').textContent = nick + ": "+ urpoints.toString();
+            document.getElementById('you').textContent = nick + ": " + urpoints.toString();
             document.getElementById('opponent').textContent = opnick + ": 0";
-            document.getElementbyid('points').style.display = "block"; 
+            document.getElementbyid('points').style.display = "block";
         });
-        socket.on('click', function(data) {
-            document.getElementById("other"+data).style.opacity  = ".5";
+        socket.on('click', function (data) {
+            document.getElementById("other" + data).style.opacity = ".5";
         });
-        socket.on('unclick', function(data) {
-            document.getElementById("other"+data).style.opacity = "";
+        socket.on('unclick', function (data) {
+            document.getElementById("other" + data).style.opacity = "";
         });
-        socket.on('opponentLeft', function(data) {
+        socket.on('opponentLeft', function (data) {
             //reload page
-            if(document.getElementById('end').style.display == "block"){
+            if (document.getElementById('end').style.display == "block") {
                 document.getElementById('end-text').textContent = "Opponent Left";
             }
-            else{
+            else {
                 location.reload();
             }
         });
-        socket.on('invalid', function(data) {
-            alert("username "+data+" is already taken");
+        socket.on('invalid', function (data) {
+            alert("username " + data + " is already taken");
             document.getElementById('login-form-response').style.display = "none";
             document.getElementById('login-form').style.display = "block";
         });
         var myid = "";
-        socket.on('id', function(data) {
+        socket.on('id', function (data) {
             myid = data;
         });
-        vsid='';
-        socket.on('vsid', function(data) {
+        vsid = '';
+        socket.on('vsid', function (data) {
             vsid = data;
         });
         var word = "";
-        socket.on('word',function(data){
+        socket.on('word', function (data) {
             word = data;
-            document.getElementsByClassName('word')[0].textContent = "Select All Images With "+word+"s";
+            document.getElementsByClassName('word')[0].textContent = "Select All Images With " + word + "s";
         });
-        var number =0
-        socket.on('images', function(data) {
+        var number = 0
+        socket.on('images', function (data) {
             number++;
-            const img = document.querySelector("#img"+number.toString());
+            const img = document.querySelector("#img" + number.toString());
             reset(0);
             //if img has class correct remove it
-            if(img.classList.contains("correct")){
+            if (img.classList.contains("correct")) {
                 img.classList.remove("correct");
             }
             if (data.includes(word) == true) {
-                img.className +="correct" ;
-            
+                img.className += "correct";
+
             }
-            count=0;
-            img.src = '/images/'+data.toString();
+            count = 0;
+            img.src = '/images/' + data.toString();
             socket.emit('imgdata', {
                 id: data
             });
-            if(number == 9){
-                number=0;
+            if (number == 9) {
+                number = 0;
             }
         });
         var num2 = 0;
-        socket.on('imgdata', function(data) {
+        socket.on('imgdata', function (data) {
             reset(1);
             num2++;
-            document.querySelector("#i"+num2.toString()).src = '/images/'+data.toString();
-            if(num2 == 9){
-                num2=0;
+            document.querySelector("#i" + num2.toString()).src = '/images/' + data.toString();
+            if (num2 == 9) {
+                num2 = 0;
             }
         });
-        socket.on('skip', function(data){
+        socket.on('skip', function (data) {
             verify.textContent = "SKIP";
         });
-        function correctCount(){
+        function correctCount() {
             var correct2 = 0;
             for (var i = 1; i < 10; i++) {
-                if(document.getElementById("img"+i.toString()).classList.contains("correct")){
+                if (document.getElementById("img" + i.toString()).classList.contains("correct")) {
                     correct2++;
                 }
             }
             return correct2;
         }
-        socket.on('verify', function(data) {
+        socket.on('verify', function (data) {
             var vspoints = data;
             document.getElementById('opponent').textContent = opnick + ":" + vspoints.toString();
         });
-        socket.on('end', function(data) {
+        socket.on('end', function (data) {
             document.getElementById('end').style.display = "block";
             document.getElementById('end-text').textContent = "You Lost :(";
         });
-        function reset(use){
+        function reset(use) {
             let div = document.getElementsByClassName("grid-item");
-            if(use == 0){
+            if (use == 0) {
                 div = document.getElementsByClassName("grid-item-user");
             }
             for (var i = 0; i < div.length; i++) {
                 div[i].style.opacity = "";
             }
-            
+
         }
         //check if all elements with the class name correct have border
-        var count=0;
-        var border =false;
+        var count = 0;
+        var border = false;
         var gridItems = document.getElementsByClassName('grid-item-user');
         for (var i = 0; i < gridItems.length; i++) {
-            gridItems[i].addEventListener('click', function(e) {
+            gridItems[i].addEventListener('click', function (e) {
                 var sendid = this.id.toString();
-                var img = document.querySelector("#img"+sendid);
-                if(this.style.opacity == ""){
+                var img = document.querySelector("#img" + sendid);
+                if (this.style.opacity == "") {
                     this.style.opacity = ".5";
                     socket.emit('click', {
                         id: sendid
                     });
-                    if(img.classList.contains('correct')){
+                    if (img.classList.contains('correct')) {
                         count++;
-                    }else{
+                    } else {
                         count--;
                     }
-                }else{
+                } else {
                     this.style.opacity = "";
                     socket.emit('unclick', {
                         id: sendid
                     });
-                    if(img.classList.contains('correct')){
+                    if (img.classList.contains('correct')) {
                         count--;
-                    }else{
+                    } else {
                         count++;
                     }
                 }
             });
         }
         verify = document.getElementById('verify');
-        function check(){
-            if(count==correctCount()){
+        function check() {
+            if (count == correctCount()) {
                 verify.textContent = "VERIFY";
-            }else{
+            } else {
                 verify.textContent = "SKIP";
             }
         }
-        verify.addEventListener('click', function(e) {
-            if(verify.textContent == "VERIFY"){
+        verify.addEventListener('click', function (e) {
+            if (verify.textContent == "VERIFY") {
                 urpoints++;
-                document.getElementById('you').textContent = nick + ": "+ urpoints.toString();
-                if(urpoints == 3){
+                document.getElementById('you').textContent = nick + ": " + urpoints.toString();
+                if (urpoints == 3) {
                     document.getElementById('end').style.display = "block";
-                        document.getElementById('end-text').textContent = "You Won :)";
+                    document.getElementById('end-text').textContent = "You Won :)";
                     socket.emit('end', {
                         id: myid
                     });
                 }
                 socket.emit('verify', {
-                        id: urpoints
-                    });
+                    id: urpoints
+                });
                 socket.emit('skip', {
                     id: correctCount()
                 });
                 verify.textContent = "SKIP";
-            }else{
+            } else {
                 verify.textContent = "SKIP";
-                document.getElementById('you').textContent = nick + ": "+ urpoints.toString();
+                document.getElementById('you').textContent = nick + ": " + urpoints.toString();
                 socket.emit('skip', {
                     id: correctCount()
                 });
-                
+
             }
         });
-        socket.on('disconnect', function(){
+        socket.on('disconnect', function () {
             location.reload();
         });
-      </script>
-      <script src="/js/pwa.js"></script>
+    </script>
+    <script src="/js/pwa.js"></script>
 </body>
+
 </html>
