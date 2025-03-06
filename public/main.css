@@ -34,13 +34,13 @@
   }
   .grid-item {
     border-radius: 15px;
-    width: 20vw;
-    height: 20vw;
+    width: 17vw;
+    height: 17vw;
   }
   
   .grid-item-user {
-    width: 20vw;
-    height: 20vw;
+    width: 17vw;
+    height: 17vw;
   }
 }
 
