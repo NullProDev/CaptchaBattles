@@ -24,7 +24,7 @@
   border: 2px solid #dedede;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   #grids {
     
     display: grid;
@@ -32,9 +32,30 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .grid-item {
+    border-radius: 15px;
+    width: 20vw;
+    height: 20vw;
+  }
+  
+  .grid-item-user {
+    width: 20vw;
+    height: 20vw;
+  }
 }
 
-@media (min-width: 800px) {}
+@media (min-width: 700px) {
+  .grid-item {
+    border-radius: 15px;
+    width: 11vw;
+    height: 11vw;
+  }
+  
+  .grid-item-user {
+    width: 11vw;
+    height: 11vw;
+  }
+}
 
 .grid-container {
   display: inline-grid;
@@ -44,16 +65,7 @@
   border-radius: 15px;
 }
 
-.grid-item {
-  border-radius: 15px;
-  width: 11vw;
-  height: 11vw;
-}
 
-.grid-item-user {
-  width: 11vw;
-  height: 11vw;
-}
 
 img {
   text-align: center;
